@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  align-items: center;
+  width: 792.86px;
+  height: 31.88px;
+  justify-content: space-between;
+  margin-left: 105px;
+  margin-right: 105px;
+  margin-top: 24px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.header__title {
+  font-weight: bold;
+  font-size: 24px;
+  color: #222222;
+}
+
+.header__nav ul {
+  display: flex;
+}
+
+.header__nav-item {
+  margin-right: 37px;
+}
+
+.header__button {
+  width: 118.51px;
+  height: 31.88px;
+  border: 1.03958px solid #1943ef;
+  box-sizing: border-box;
+  border-radius: 33.9597px;
+  background-color: #ffffff;
+  color: #1943ef;
+}

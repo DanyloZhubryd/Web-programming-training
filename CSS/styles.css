@@ -1,0 +1,17 @@
+@import "./normalize.min.css";
+
+@import "./globals.css";
+
+@import "./header.css";
+
+@import "./hero.css";
+
+@import "./reminder.css";
+
+@import "./sync.css";
+
+@import "./convenience.css";
+
+@import "./bottom-baner.css";
+
+@import "./footer.css";
