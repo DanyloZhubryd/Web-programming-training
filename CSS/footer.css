@@ -1,0 +1,16 @@
+footer {
+  height: 45px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+
+  margin: 40px;
+}
+
+.footer__copyright {
+  font-weight: 500;
+  font-size: 11.0889px;
+  line-height: 13px;
+}
