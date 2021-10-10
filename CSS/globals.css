@@ -120,15 +120,11 @@ article {
   border-radius: 31.8806px;
 }
 #arrows-image {
-  margin-left: 130px;
-  margin-top: 90px;
-  margin-bottom: 30px;
+  margin: 13px 20%;
 }
 
 #atom-image {
-  margin-left: 630px;
-  margin-top: 90px;
-  margin-bottom: 10px;
+  margin-left: 75%;
 }
 
 @media screen and (max-width: 768px) {
