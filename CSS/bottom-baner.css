@@ -39,6 +39,10 @@
   line-height: 13px;
 }
 
+.bottom-baner__button:hover {
+  animation: moving 1s forwards;
+}
+
 .bottom-baner__text {
   padding: 5px 0;
 }

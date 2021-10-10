@@ -8,7 +8,6 @@
 @media screen and (max-width: 768px) {
   .hero__inner {
     width: 100%;
-    display: flex;
     flex-direction: column;
     justify-content: center;
   }
@@ -76,6 +75,10 @@
   line-height: 13px;
 }
 
+.hero__button:hover {
+  animation: moving 1s forwards;
+}
+
 .hero__image {
   background-image: url(../images/red_circle.svg),
     url(../images/orange_circle.svg);
@@ -91,9 +94,13 @@
     background: none;
   }
 }
+
 .hero__phone {
   width: 240px;
   height: 458.74px;
+}
+.hero__phone:hover {
+  animation: scaling 0.5s both;
 }
 @media screen and (max-width: 768px) {
   .hero__phone {

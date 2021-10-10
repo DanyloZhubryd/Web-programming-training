@@ -123,6 +123,10 @@ article {
   margin: 13px 20%;
 }
 
+#arrows-image img {
+  animation: color-swing 2s infinite;
+}
+
 #atom-image {
   margin-left: 75%;
 }

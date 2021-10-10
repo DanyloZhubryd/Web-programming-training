@@ -48,6 +48,10 @@
   color: #1943ef;
 }
 
+.header__button:hover {
+  animation: moving 1s forwards;
+}
+
 @media screen and (max-width: 768px) {
   .header {
     width: 90%;

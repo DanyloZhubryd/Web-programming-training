@@ -1,0 +1,27 @@
+@keyframes scaling {
+  from {
+    transform: scale(0.9);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes color-swing {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes moving {
+  from {
+  }
+
+  to {
+    transform: translate(-7px, -5px);
+  }
+}
