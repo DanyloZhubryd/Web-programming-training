@@ -1,14 +1,24 @@
 body {
   font-family: Gilroy;
   color: #73738d;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    width: 100%;
+  }
 }
 
 h1 {
-  margin: 0px;
+  margin: 0;
 }
 
 h2 {
-  margin: 0px;
+  margin: 0;
   font-weight: bold;
   font-size: 24.95px;
   line-height: 30px;
@@ -48,6 +58,7 @@ a {
 }
 ul {
   padding: 0px;
+  margin: 0px;
 }
 
 li {
@@ -59,9 +70,28 @@ li {
   max-width: 1110px;
 }
 
+@media screen and (max-width: 1024px) {
+  .container {
+    margin: 0 20px;
+  }
+}
+
 article {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  width: 65%;
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+
+    margin: 20px 0;
+  }
 }
 
 .check-marks {
@@ -99,4 +129,10 @@ article {
   margin-left: 630px;
   margin-top: 90px;
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .vector {
+    display: none;
+  }
 }

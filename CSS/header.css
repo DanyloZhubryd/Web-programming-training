@@ -1,11 +1,10 @@
 .header {
   display: flex;
   align-items: center;
-  width: 792.86px;
-  height: 31.88px;
+  width: 65%;
+  height: 30px;
   justify-content: space-between;
-  margin-left: 105px;
-  margin-right: 105px;
+  margin: auto;
   margin-top: 24px;
   font-size: 11px;
   font-weight: 600;
@@ -22,15 +21,41 @@
 }
 
 .header__nav-item {
-  margin-right: 37px;
+  margin-right: 30%;
 }
 
 .header__button {
-  width: 118.51px;
-  height: 31.88px;
+  width: 15%;
+  height: 30px;
   border: 1.03958px solid #1943ef;
   box-sizing: border-box;
   border-radius: 33.9597px;
   background-color: #ffffff;
   color: #1943ef;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    margin-left: 0;
+    margin-top: 0;
+    width: 90%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 20px;
+    background-color: white;
+    z-index: 10;
+  }
+
+  .header__nav-item {
+    margin-right: 10%;
+  }
+  .header__nav {
+    display: block;
+  }
+
+  .header__title {
+    display: none;
+  }
 }
