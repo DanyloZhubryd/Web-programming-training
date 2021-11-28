@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Button } from 'antd';
 
 export const SectionWrapper = styled.div`
     display: flex;
@@ -18,16 +17,4 @@ export const StyledText = styled.div`
         font-size: 40px;
         color: white;
     }
-`
-export const StyledButton = styled(Button)`
-    background: transparent;
-    border-radius: 20px;
-    color: white;
-`;
-
-export const CardWrapper = styled.div`
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 20px;
 `

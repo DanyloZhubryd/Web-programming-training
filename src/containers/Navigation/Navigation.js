@@ -1,7 +1,9 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import { LinkingWrapper } from './Navigation.styles';
 import Home from '../Home/Home';
+import { Catalogue } from "containers/Catalogue/Catalogue";
+import { BirdPage } from "containers/BirdPage/BirdPage";
 
 const Navigation = () => (
   <Router>
@@ -11,17 +13,14 @@ const Navigation = () => (
           <NavLink exact to="/" activeClassName="selected">Home</NavLink>
         </li>
         <li>
-          <NavLink exact to="/shop" activeClassName="selected">Shop</NavLink>
+          <NavLink exact to="/catalogue" activeClassName="selected">Catalogue</NavLink>
         </li>
       </ul>
-      <Switch>
-        <Route path="/shop">
-          <div>Hello it is shop</div>
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
+      <Routes>
+        <Route exact path="/" element={<Home />}/>
+        <Route exact path="/catalogue" element={<Catalogue />}/>
+        <Route exact path="/bird/:birdId" element={<BirdPage />}/> 
+      </Routes>
     </LinkingWrapper>
   </Router>
 );
