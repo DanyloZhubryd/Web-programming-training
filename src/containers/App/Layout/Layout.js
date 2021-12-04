@@ -28,8 +28,6 @@ const Layout = () => (
     </div>
     <div>
       <IconsWrapper>
-        <SearchOutlined />
-
         <LoginOutlined />
       </IconsWrapper>
     </div>

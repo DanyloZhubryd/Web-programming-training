@@ -15,7 +15,6 @@ export const BirdPage = () => {
 
     useEffect(() => {
         getBird(birdId).then(receivedBird => {
-            console.log(receivedBird)
             setBird(receivedBird)
             setIsLoaded(true)
             })

@@ -24,7 +24,6 @@ export const CardStorage = ({birdNum, birdIncrement=1, style, filters}) => {
                     }
                     else setBirdList(receivedBirdList.slice(0, birdListSize))
                     setIsLoaded(true)
-
                 }
             )
             .catch( () =>  {
