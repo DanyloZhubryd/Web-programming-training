@@ -4,7 +4,7 @@ import cockatiel from "Icons/Cockatiel.jpg";
 import parakeet from "Icons/Large-parakeet.jpg";
 import eclectus from "Icons/Eclectus.jpg";
 
-export const createBirdCard = (bird) => {
+export const createBirdCard = (bird, additional=undefined) => {
     let image;
     if (bird.image.toString().toLocaleLowerCase().search("cockatiel") !== -1){
         image = cockatiel;
@@ -21,10 +21,11 @@ export const createBirdCard = (bird) => {
                   title = {bird.name}
                   price = {bird.price}
                   id={bird.id}
+                  additional={additional}
         />
     )
 }
 
-export const getBirdCards = (birdList) => {
-    return birdList.map(createBirdCard);
+export const getBirdCards = (birdList, addOnCallback = () => undefined) => {
+    return birdList.map((bird) => createBirdCard(bird, addOnCallback(bird)));
 }

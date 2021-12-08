@@ -6,9 +6,16 @@ import cockatiel from "Icons/Cockatiel.jpg";
 import parakeet from "Icons/Large-parakeet.jpg";
 import eclectus from "Icons/Eclectus.jpg";
 import { Loader } from 'components/loader/Loader';
+import { useDispatch, useSelector } from 'react-redux';
+import { ShoppingCartOutlined } from '@ant-design/icons';
+import { addToCart, increaseAmount } from 'redux/actions/cartActions';
+import { Button } from 'antd';
 
 
 export const BirdPage = () => {
+    const cartItems = useSelector((state) => state.cartItems.cartItems);
+    let dispatch = useDispatch();
+    
     const {birdId} = useParams();
     const [bird, setBird] = useState();
     const [isLoaded, setIsLoaded] = useState(false);
@@ -34,6 +41,16 @@ export const BirdPage = () => {
         image = eclectus;
     }
 
+    const handleAddToCart = () => {
+        if (cartItems.some(item => item.id == birdId)) {
+            dispatch(increaseAmount(birdId));
+        } else {
+            let item = bird;
+            item.amount = 1;
+            dispatch(addToCart(item));
+        }
+    }
+    
     return (
         <BirdPageStyled>
             <img src= {image} alt={bird.name}/>
@@ -47,6 +64,7 @@ export const BirdPage = () => {
                         { bird.price ? "$" + bird.price : " unknown"}
                     </li>
                 </ul>
+                <Button onClick={handleAddToCart}> To Cart <ShoppingCartOutlined/> </Button>
             </div>
         </BirdPageStyled>
     );

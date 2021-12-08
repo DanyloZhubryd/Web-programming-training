@@ -5,7 +5,7 @@ import LearnMoreButton from "components/LearnMoreButton/LearnMoreButton";
 import { descriptions } from "Descriptions/descriptions";
 const { Meta } = Card;
 
-const BirdCard = ({ title='No title.', image, price, id}) => {
+const BirdCard = ({ title='No title.', image, price, id, additional=null}) => {
   return (
   <Card
     hoverable
@@ -17,6 +17,7 @@ const BirdCard = ({ title='No title.', image, price, id}) => {
     <Meta title={title} description= {descriptions[id-1].text} />
     <Footer>
       <p>${price}</p>
+      <div>{additional}</div>
       <LearnMoreButton id={id}/>
     </Footer>
   </Card>
