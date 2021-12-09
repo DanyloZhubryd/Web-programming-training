@@ -1,8 +1,8 @@
-import { Button, Image } from "antd";
+import { Button } from "antd";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { increaseAmount, decreaseAmount, removeFromCart } from "redux/actions/cartActions";
-import { Buttons, CardWrapper } from "./CartItem.styled";
+import { Buttons } from "./CartItem.styled";
 import BirdCard from "components/CardItem/BirdCard";
 import cockatiel from "Icons/Cockatiel.jpg";
 import parakeet from "Icons/Large-parakeet.jpg";
@@ -41,8 +41,9 @@ export const CartItem = (props) => {
       id={props.item.id}
       additional={
         <Buttons>
-          <Button onClick={handleAmountIncrease}>+</Button>
           <Button onClick={handleAmountDecrease}>-</Button>
+          <p>{props.item.amount}</p>
+          <Button onClick={handleAmountIncrease}>+</Button>
         </Buttons>}/>
     );
     }

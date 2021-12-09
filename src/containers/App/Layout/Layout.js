@@ -2,7 +2,6 @@ import React from "react";
 import { StyledHeader, IconsWrapper } from "./Layout.styles";
 import {
   TwitterOutlined,
-  SearchOutlined,
   InstagramOutlined,
   FacebookOutlined,
   DingtalkOutlined,

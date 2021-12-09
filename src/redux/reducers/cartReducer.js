@@ -4,9 +4,10 @@ const initialState = {
 
 export const cartItemsReducer = (state = initialState, action) => {
   let itemIndex = 0;
-  if (action.itemId != undefined) {
+  if (action.itemId !== undefined) {
       itemIndex = state.cartItems.findIndex(item => item.id == action.itemId);
   }
+  console.log(itemIndex); 
 
   switch (action.type) {
       case 'ADD_TO_CART':

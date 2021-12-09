@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {useParams} from "react-router-dom";
+import {NavLink, useParams} from "react-router-dom";
 import { getBird } from 'API/API';
 import { BirdPageStyled } from './BirdPage.styled';
 import cockatiel from "Icons/Cockatiel.jpg";
@@ -64,7 +64,9 @@ export const BirdPage = () => {
                         { bird.price ? "$" + bird.price : " unknown"}
                     </li>
                 </ul>
-                <Button onClick={handleAddToCart}> To Cart <ShoppingCartOutlined/> </Button>
+                <NavLink exact to={'/cart'}>
+                    <Button onClick={handleAddToCart}> To Cart <ShoppingCartOutlined/> </Button>
+                </NavLink>
             </div>
         </BirdPageStyled>
     );
