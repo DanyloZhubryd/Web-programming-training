@@ -12,5 +12,6 @@ export const ItemsWrapper = styled.div`
 `
 
 export const Price = styled.div`
-  align-items: center;
+  width: 20%;
+  margin: auto;
 `
